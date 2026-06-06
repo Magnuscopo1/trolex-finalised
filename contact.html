@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Trolex Products Private Limited</title>
+    <meta name="description" content="Contact Trolex Products Private Limited for precision manufacturing solutions. Visit our facilities at Harohalli Industrial Area Phase 3 or Bommasandra Industrial Estate, Karnataka, India.">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Two Map Cards Side by Side */
+        .maps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .map-card {
+            background: var(--bg-white);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s ease;
+        }
+        .map-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+        .map-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, var(--nav-blue-dark), var(--nav-blue-mid));
+            color: white;
+        }
+        .map-card-header i {
+            font-size: 22px;
+            color: var(--accent-cyan);
+        }
+        .map-card-header h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+        .map-card-body {
+            padding: 16px;
+        }
+        .map-card-body iframe {
+            width: 100%;
+            display: block;
+        }
+        .map-card-footer {
+            padding: 16px 24px;
+            background: var(--bg-light);
+            border-top: 1px solid var(--border-light);
+        }
+        .map-card-footer p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .map-card-footer i {
+            color: var(--accent-cyan);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .maps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="images/trolex-logo.jpg" alt="Trolex Logo" class="logo-img">
+            <div class="logo-text"><span>TROLEX</span></div>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <div class="dropdown" id="solutionsDropdown">
+                <a href="solutions.html" class="nav-link has-dropdown" onclick="toggleDropdown(event)">
+                    Solutions <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="solutions.html#machining" class="dropdown-item">Precision Machining</a>
+                    <a href="solutions.html#investment" class="dropdown-item">Investment Casting</a>
+                    <a href="solutions.html#sheetmetal" class="dropdown-item">Sheet Metal & Fabrication</a>
+                    <a href="solutions.html#extrusions" class="dropdown-item">Aluminium Extrusions</a>
+                    <a href="solutions.html#casting" class="dropdown-item">Aluminium Casting</a>
+                    <a href="solutions.html#pdc" class="dropdown-item">Pressure Die Casting</a>
+                    <a href="solutions.html#surface" class="dropdown-item">Surface Treatment</a>
+                    <a href="solutions.html#heat" class="dropdown-item">Heat Treatment</a>
+                </div>
+            </div>
+            <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+            <a href="quality.html" class="nav-link">Quality</a>
+            <a href="contact.html" class="nav-contact-btn-mobile">Contact Us</a>
+        </div>
+        <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+</nav>
+
+<section class="hero hero-small">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge"><span class="dot"></span>Get In Touch</div>
+            <h1 class="hero-title">Let's Start Your<br><span class="highlight">Project</span></h1>
+            <p class="hero-subtitle">Reach out to our team for quotes, project discussions, or facility visits at Harohalli or Bommasandra. We're ready to turn your concepts into precision components.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info-col">
+                <div class="contact-card fade-in">
+                    <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-card-content">
+                        <h3>Harohalli Factory</h3>
+                        <p>Plot No.518, Kanakapura Taluk, Maralavadi Hobli, <br> Harohalli Industrial Area Phase 3, Ramanagara,<br> Karnataka, India – 562112</p>
+                    </div>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-card-content">
+                        <h3>Bommasandra Factory</h3>
+                        <p>Survey No 349, Shed No 348/A, Jigani Link Road, <br>TaeguTec Circle next to Apotex near KIADB Water Tank, <br> Bommasandra Industrial Estate, Bengaluru, Karnataka ,<br> India – 560105</p>
+                    </div>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="contact-card-content">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+919187600830">+91 91876 00830</a></p>
+                    </div>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-card-content">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@trolex.in">info@trolex.in</a></p>
+                    </div>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-card-icon"><i class="fas fa-id-card"></i></div>
+                    <div class="contact-card-content">
+                        <h3>GST Number</h3>
+                        <p>29AAMCT9407B1Z4</p>
+                    </div>
+                </div>
+                <div class="contact-card fade-in">
+                    <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-card-content">
+                        <h3>Business Hours</h3>
+                        <p>Monday – Saturday<br>9:00 AM – 6:00 PM IST</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-col fade-in">
+                <div class="form-card">
+                    <h2 class="form-title"><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+                    <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i> Full Name *</label>
+                                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company"><i class="fas fa-building"></i> Company</label>
+                                <input type="text" id="company" name="company" placeholder="Your company name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> Email *</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service"><i class="fas fa-cogs"></i> Service Required</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="machining">Precision Machining</option>
+                                <option value="investment">Investment Casting</option>
+                                <option value="sheetmetal">Sheet Metal & Fabrication</option>
+                                <option value="extrusions">Aluminium Extrusions</option>
+                                <option value="casting">Aluminium Casting</option>
+                                <option value="pdc">Pressure Die Casting</option>
+                                <option value="surface">Surface Treatment</option>
+                                <option value="heat">Heat Treatment</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-alt"></i> Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Describe your project requirements, quantities, materials, and any specific details..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. Our team will contact you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-white">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-label">Location</span>
+            <h2 class="section-title">Find <span class="highlight">Us</span> Here</h2>
+            <p class="section-desc">Visit our manufacturing facilities at Harohalli Industrial Area Phase 3 or Bommasandra Industrial Estate.</p>
+        </div>
+        <div class="maps-grid fade-in">
+            <!-- Harohalli Map Card -->
+            <div class="map-card">
+                <div class="map-card-header">
+                    <i class="fas fa-industry"></i>
+                    <h3>Harohalli Facility</h3>
+                </div>
+                <div class="map-card-body">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0!2d77.4!3d12.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDMwJzAwLjAiTiA3N8KwMjQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Harohalli Facility Location"></iframe>
+                </div>
+                <div class="map-card-footer">
+                    <p><i class="fas fa-map-marker-alt"></i> Plot No.518, Harohalli Industrial Area Phase 3, Ramanagara, Karnataka, <br>India – 562112</p>
+                </div>
+            </div>
+            <!-- Bommasandra Map Card -->
+            <div class="map-card">
+                <div class="map-card-header">
+                    <i class="fas fa-warehouse"></i>
+                    <h3>Bommasandra Facility</h3>
+                </div>
+                <div class="map-card-body">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.0!2d77.7!3d12.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQ4JzAwLjAiTiA3N8KwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Bommasandra Facility Location"></iframe>
+                </div>
+                <div class="map-card-footer">
+                    <p><i class="fas fa-map-marker-alt">
+                    </i> Survey No 349, Shed No 348/A, Jigani Link Road, TaeguTec Circle next to Apotex near KIADB Water Tank, Bommasandra Industrial Estate, Bengaluru, Karnataka,<br>India – 560105</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="quick-actions">
+            <div class="quick-action-card fade-in">
+                <div class="quick-action-icon"><i class="fas fa-file-alt"></i></div>
+                <h3>Request a Quote</h3>
+                <p>Send us your drawings and specifications for a detailed quotation.</p>
+                <a href="mailto:info@trolex.in?subject=Quote Request" class="btn btn-secondary"><i class="fas fa-envelope"></i> Email Us</a>
+            </div>
+            <div class="quick-action-card fade-in">
+                <div class="quick-action-icon"><i class="fas fa-industry"></i></div>
+                <h3>Facility Tour</h3>
+                <p>Schedule a visit to see our manufacturing capabilities in action.</p>
+                <a href="tel:+919187600830" class="btn btn-secondary"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+            <div class="quick-action-card fade-in">
+                <div class="quick-action-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Partner With Us</h3>
+                <p>Explore vendor partnership and collaboration opportunities.</p>
+                <a href="mailto:info@trolex.in?subject=Partnership Inquiry" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Inquire</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/trolex-logo.jpg" alt="Trolex Logo" class="logo-img">
+                    <div class="logo-text"><span>TROLEX</span></div>
+                </a>
+                <p>Precision-driven manufacturing company delivering end-to-end engineering and production solutions for global industries.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-addresses">
+                    <div class="footer-address">
+                        <h5><i class="fas fa-map-marker-alt"></i> Harohalli</h5>
+                        <p>Plot No.518, Kanakapura Taluk, Maralavadi Hobli, Harohalli Industrial Area Phase 3, Ramanagara, Karnataka, India – 562112</p>
+                    </div>
+                    <div class="footer-address">
+                        <h5><i class="fas fa-map-marker-alt"></i> Bommasandra</h5>
+                        <p>Survey No 349, Shed No 348/A, Jigani Link Road, TaeguTec Circle next to Apotex near KIADB Water Tank, Bommasandra Industrial Estate, Bengaluru, Karnataka, India – 560105</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="quality.html">Quality</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Solutions</h4>
+                <ul class="footer-links">
+                    <li><a href="solutions.html#machining">Precision Machining</a></li>
+                    <li><a href="solutions.html#investment">Investment Casting</a></li>
+                    <li><a href="solutions.html#sheetmetal">Sheet Metal & Fabrication</a></li>
+                    <li><a href="solutions.html#extrusions">Aluminium Extrusions</a></li>
+                    <li><a href="solutions.html#casting">Aluminium Casting</a></li>
+                    <li><a href="solutions.html#pdc">Pressure Die Casting</a></li>
+                    <li><a href="solutions.html#surface">Surface Treatment</a></li>
+                    <li><a href="solutions.html#heat">Heat Treatment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Contact</h4>
+                <div class="footer-contact">
+                    <p><span class="icon"><i class="fas fa-phone"></i></span> +91 91876 00830</p>
+                    <p><span class="icon"><i class="fas fa-envelope"></i></span> info@trolex.in</p>
+                    <p><span class="icon"><i class="fas fa-id-card"></i></span> GST: 29AAMCT9407B1Z4</p>
+                    <p><span class="icon"><i class="fas fa-clock"></i></span> Mon – Sat, 9:00 AM – 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Trolex Products Private Limited. All rights reserved.</p>
+            <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => { mobileToggle.classList.toggle('active'); navLinks.classList.toggle('active'); });
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => { if (!link.classList.contains('has-dropdown')) { mobileToggle.classList.remove('active'); navLinks.classList.remove('active'); } });
+    });
+    function toggleDropdown(e) { if (window.innerWidth <= 768) { e.preventDefault(); e.target.closest('.dropdown').classList.toggle('active'); } }
+    document.getElementById('scrollTop').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const counters = document.querySelectorAll('.stat-number');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseFloat(entry.target.getAttribute('data-count'));
+                animateCounter(entry.target, target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(counter => counterObserver.observe(counter));
+    function animateCounter(element, target) {
+        let current = 0;
+        const isDecimal = target < 1;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                if (isDecimal) { element.textContent = target; } else { element.textContent = target.toLocaleString() + (target === 100 ? '%' : '+'); }
+                clearInterval(timer);
+            } else {
+                if (isDecimal) { element.textContent = current.toFixed(2); } else { element.textContent = Math.floor(current).toLocaleString(); }
+            }
+        }, 30);
+    }
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = this.querySelector('.btn-submit');
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        setTimeout(() => {
+            contactForm.style.display = 'none';
+            formSuccess.style.display = 'flex';
+            formSuccess.classList.add('visible');
+        }, 1500);
+    });
+</script>
+</body>
+</html>

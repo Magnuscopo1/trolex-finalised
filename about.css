@@ -1,0 +1,734 @@
+/* ============================================
+   TROLEX ABOUT PAGE STYLES - CLEAN & RESPONSIVE
+   ============================================ */
+
+/* ---- CSS Variables (Self-contained) ---- */
+:root {
+    --nav-blue-dark: #0f172a;
+    --nav-blue-light: #1e40af;
+    --nav-blue-bright: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-teal: #14b8a6;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --bg-white: #ffffff;
+    --bg-light: #f8fafc;
+    --border-light: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.6s ease;
+}
+
+/* ============================================
+   HERO SMALL
+   ============================================ */
+.hero-small {
+    min-height: 60vh;
+    padding-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-small .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.hero-small .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+/* ============================================
+   ABOUT GRID LAYOUT
+   ============================================ */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* ============================================
+   CLEAN IMAGE SYSTEM - NO EXCESSIVE EFFECTS
+   ============================================ */
+
+.about-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image-tilt {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+}
+
+/* Clean subtle border */
+.about-image-border {
+    position: absolute;
+    inset: -3px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--accent-cyan), var(--nav-blue-bright));
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Main Image Container - Clean */
+.about-image {
+    position: relative;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    z-index: 1;
+    background: var(--nav-blue-dark);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.about-image-tilt:hover .about-image img {
+    transform: scale(1.05);
+}
+
+/* Subtle shine overlay - very light */
+.about-image-shine {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%);
+}
+
+/* Grid overlay - subtle */
+.about-image-grid {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background-image:
+        linear-gradient(rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.about-image-tilt:hover .about-image-grid {
+    opacity: 1;
+}
+
+/* Scanline - very subtle */
+.about-image-scanline {
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    pointer-events: none;
+    z-index: 4;
+    opacity: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 6px,
+        rgba(6, 182, 212, 0.02) 6px,
+        rgba(6, 182, 212, 0.02) 12px
+    );
+    transition: opacity 0.4s ease;
+}
+
+.about-image-tilt:hover .about-image-scanline {
+    opacity: 1;
+}
+
+/* Corner brackets - clean and minimal */
+.about-image::before,
+.about-image::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--accent-cyan);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.about-image::before {
+    top: 12px;
+    left: 12px;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 6px 0 0 0;
+}
+
+.about-image::after {
+    bottom: 12px;
+    right: 12px;
+    border-left: none;
+    border-top: none;
+    border-radius: 0 0 6px 0;
+}
+
+.about-image-tilt:hover .about-image::before,
+.about-image-tilt:hover .about-image::after {
+    opacity: 0.5;
+}
+
+/* ============================================
+   CLEAN BADGE - NO GLOW EFFECTS
+   ============================================ */
+.about-image-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: linear-gradient(135deg, var(--nav-blue-dark), var(--nav-blue-light));
+    color: white;
+    padding: 18px 24px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: var(--shadow-lg);
+    z-index: 10;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-image-tilt:hover .about-image-badge {
+    transform: scale(1.02);
+}
+
+.badge-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--accent-cyan);
+    transition: transform 0.3s ease;
+}
+
+.about-image-tilt:hover .badge-icon {
+    transform: rotateY(360deg);
+}
+
+.badge-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.badge-number {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+.badge-label {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.85;
+    letter-spacing: 0.3px;
+}
+
+/* ============================================
+   ABOUT CONTENT
+   ============================================ */
+.about-content {
+    padding: 20px 0;
+}
+
+.about-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.about-highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 10px 14px;
+    background: var(--bg-light);
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.about-highlight-item:hover {
+    transform: translateX(6px);
+    border-color: var(--accent-cyan);
+    background: rgba(6, 182, 212, 0.05);
+    box-shadow: var(--shadow-sm);
+}
+
+.about-highlight-item i {
+    color: var(--accent-teal);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.about-highlight-item:hover i {
+    transform: scale(1.2);
+}
+
+/* ============================================
+   EXPANSION / FACILITIES GRID
+   ============================================ */
+.expansion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.expansion-card {
+    background: var(--bg-white);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border-light);
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.expansion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-cyan);
+}
+
+.expansion-image {
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.expansion-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.4), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.expansion-card:hover .expansion-image::after {
+    opacity: 1;
+}
+
+.expansion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.expansion-card:hover .expansion-image img {
+    transform: scale(1.08);
+}
+
+.expansion-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    height: 220px;
+}
+
+.expansion-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease, filter 0.4s ease;
+    filter: grayscale(20%);
+}
+
+.expansion-card:hover .expansion-images img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.expansion-images img:nth-child(1) { transition-delay: 0ms; }
+.expansion-images img:nth-child(2) { transition-delay: 80ms; }
+.expansion-images img:nth-child(3) { transition-delay: 160ms; }
+
+.expansion-info {
+    padding: 24px;
+}
+
+.expansion-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.expansion-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-teal));
+    transition: width 0.4s ease;
+}
+
+.expansion-card:hover .expansion-info h3::after {
+    width: 100%;
+}
+
+.expansion-info p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* ============================================
+   MISSION / VISION / VALUES CARDS
+   ============================================ */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.mission-card {
+    background: var(--bg-white);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    border: 1px solid var(--border-light);
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--nav-blue-bright), var(--accent-teal));
+    transform: scaleX(0);
+    transition: var(--transition-normal);
+}
+
+.mission-card:hover::before {
+    transform: scaleX(1);
+}
+
+.mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mission-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, var(--bg-light), #e0f2fe);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--nav-blue-light);
+    margin: 0 auto 24px;
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-icon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--nav-blue-light), var(--accent-cyan));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 20px;
+}
+
+.mission-card:hover .mission-icon {
+    transform: scale(1.1) rotate(-4deg);
+    box-shadow: 0 10px 30px rgba(6, 182, 212, 0.25);
+}
+
+.mission-card:hover .mission-icon::after {
+    opacity: 1;
+}
+
+.mission-icon i {
+    position: relative;
+    z-index: 2;
+    transition: color 0.4s ease;
+}
+
+.mission-card:hover .mission-icon i {
+    color: white;
+}
+
+.mission-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.mission-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* ============================================
+   FADE-IN ANIMATION UTILITIES
+   ============================================ */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for children */
+.about-grid .fade-in:nth-child(1) { transition-delay: 0.1s; }
+.about-grid .fade-in:nth-child(2) { transition-delay: 0.25s; }
+.expansion-grid .fade-in:nth-child(1) { transition-delay: 0.1s; }
+.expansion-grid .fade-in:nth-child(2) { transition-delay: 0.2s; }
+.mission-grid .fade-in:nth-child(1) { transition-delay: 0.1s; }
+.mission-grid .fade-in:nth-child(2) { transition-delay: 0.2s; }
+.mission-grid .fade-in:nth-child(3) { transition-delay: 0.3s; }
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS - FIXED FOR MOBILE
+   ============================================ */
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-image-wrapper { order: 1; }
+    .about-content { order: 2; }
+
+    .about-image-tilt {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-image-tilt {
+        max-width: 100%;
+    }
+
+    .about-image-border {
+    
+        border-radius: 14px;
+    }
+
+    .about-image {
+        border-radius: 12px;
+    }
+
+    .about-image-shine,
+    .about-image-grid,
+    .about-image-scanline {
+        border-radius: 12px;
+    }
+
+    /* FIXED: Badge positioning for mobile */
+    .about-image-badge {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin: -24px auto 0;
+        width: fit-content;
+        padding: 14px 20px;
+        gap: 12px;
+        border-radius: 12px;
+        transform: none;
+    }
+
+    .about-image-tilt:hover .about-image-badge {
+        transform: scale(1.02);
+    }
+
+    .badge-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 8px;
+    }
+
+    .badge-number {
+        font-size: 18px;
+    }
+
+    .badge-label {
+        font-size: 11px;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .about-highlight-item {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mission-card {
+        padding: 30px 24px;
+    }
+
+    .expansion-images {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .expansion-images img {
+        height: 180px;
+    }
+
+    .expansion-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .hero-small {
+        min-height: 50vh;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .about-grid {
+        gap: 40px;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-grid {
+        gap: 30px;
+    }
+
+    .about-image {
+        border-radius: 10px;
+    }
+
+    .about-image-border {
+        border-radius: 12px;
+    }
+
+    .about-image-badge {
+        margin: -18px auto 0;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    .badge-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .badge-number {
+        font-size: 16px;
+    }
+
+    .badge-label {
+        font-size: 10px;
+    }
+
+    .about-highlights {
+        margin-top: 20px;
+    }
+
+    .expansion-image {
+        height: 180px;
+    }
+
+    .expansion-images img {
+        height: 160px;
+    }
+
+    .expansion-info {
+        padding: 18px;
+    }
+
+    .expansion-info h3 {
+        font-size: 16px;
+    }
+
+    .expansion-info p {
+        font-size: 13px;
+    }
+
+    .mission-card {
+        padding: 24px 18px;
+        border-radius: 16px;
+    }
+
+    .mission-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        border-radius: 16px;
+    }
+
+    .mission-card h3 {
+        font-size: 18px;
+    }
+
+    .mission-card p {
+        font-size: 13px;
+    }
+}

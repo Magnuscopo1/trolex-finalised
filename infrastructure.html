@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure | Trolex Products Private Limited</title>
+    <meta name="description" content="Explore Trolex state-of-the-art manufacturing infrastructure: VMC, Turning Centers, Wire EDM, Laser Cutting, CNC Bending, and advanced equipment at our 40,000+ sq.ft facilities.">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="infrastructure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* 2-Card Facility Layout */
+        .facility-images-wrapper.two-facility-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .facility-images-wrapper.two-facility-cards .facility-image-card {
+            flex: 1 1 calc(50% - 24px);
+            min-width: 300px;
+            max-width: 520px;
+        }
+
+        /* Bommasandra 3-image grid inside card */
+        .facility-thumb-bommasandra {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            height: 220px;
+            width: 100%;
+        }
+        .facility-thumb-bommasandra:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .bommasandra-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            height: 100%;
+            width: 100%;
+        }
+        .bommasandra-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .facility-thumb-bommasandra:hover .bommasandra-images img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .facility-images-wrapper.two-facility-cards .facility-image-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .bommasandra-images {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .bommasandra-images img {
+                height: 180px;
+            }
+            .facility-thumb-bommasandra {
+                height: auto;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="images/trolex-logo.jpg" alt="Trolex Logo" class="logo-img">
+            <div class="logo-text"><span>TROLEX</span></div>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <div class="dropdown" id="solutionsDropdown">
+                <a href="solutions.html" class="nav-link has-dropdown" onclick="toggleDropdown(event)">
+                    Solutions <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="solutions.html#machining" class="dropdown-item">Precision Machining</a>
+                    <a href="solutions.html#investment" class="dropdown-item">Investment Casting</a>
+                    <a href="solutions.html#extrusions" class="dropdown-item">Aluminium Extrusions</a>
+                    <a href="solutions.html#casting" class="dropdown-item">Aluminium Casting</a>
+                    <a href="solutions.html#pdc" class="dropdown-item">Pressure Die Casting</a>
+                    <a href="solutions.html#surface" class="dropdown-item">Surface Treatment</a>
+                    <a href="solutions.html#heat" class="dropdown-item">Heat Treatment</a>
+                </div>
+            </div>
+            <a href="infrastructure.html" class="nav-link active">Infrastructure</a>
+            <a href="quality.html" class="nav-link">Quality</a>
+            <a href="contact.html" class="nav-contact-btn-mobile">Contact Us</a>
+        </div>
+        <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<section class="hero hero-small">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Our Facility
+            </div>
+            <h1 class="hero-title">
+                World-Class <span class="highlight">Infrastructure</span>
+            </h1>
+            <p class="hero-subtitle">
+                State-of-the-art 40,000+ sq.ft manufacturing ecosystem equipped with advanced 
+                CNC machines, laser cutting, turning centers, wire EDM, and precision fabrication.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="facility-section">
+    <div class="facility-container">
+        <div class="facility-header">
+            <span class="section-label">Facility</span>
+            <h2 class="section-title">
+                Our <span class="highlight">Manufacturing</span> Setup
+            </h2>
+            <p class="section-desc">
+                Driven by engineering excellence and modern manufacturing practices, our dual-facility 
+                infrastructure combines precision machining at Harohalli with mass fabrication at Bommasandra.
+            </p>
+        </div>
+        <div class="facility-images-wrapper two-facility-cards">
+            <div class="facility-image-card">
+                <div class="facility-thumb">
+                    <img src="images/about.png" alt="Trolex Harohalli CNC Facility">
+                    <div class="facility-overlay">
+                        <div class="facility-stat">
+                            <span class="facility-stat-number">8,000</span>
+                            <span class="facility-stat-label">Sq.Ft Harohalli</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="facility-image-card">
+    <div class="facility-thumb-bommasandra">
+        <div class="bommasandra-images">
+            <img src="images/b1.jpeg" alt="Bommasandra Fabrication Workshop">
+            <img src="images/b2.jpeg" alt="Bommasandra Laser Cutting & Powder Coating">
+            <img src="images/b3.jpeg" alt="Bommasandra Industrial Estate">
+        </div>
+        <div class="facility-overlay">
+            <div class="facility-stat">
+                <span class="facility-stat-number">32,000+</span>
+                <span class="facility-stat-label">Sq.Ft Bommasandra</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="section section-white">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-label">Precision Machining</span>
+            <h2 class="section-title">
+                Harohalli <span class="highlight">CNC</span> Equipment
+            </h2>
+            <p class="section-desc">
+                Our Harohalli facility houses precision CNC machines and specialized equipment to handle 
+                complex manufacturing requirements with accuracy.
+            </p>
+        </div>
+        <div class="equipment-grid">
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/page6_img2.jpeg" alt="AMS Vertical Machining Center">
+                    <div class="equipment-badge">VMC</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>Vertical Machining Center</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Make: AMS</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">X Axis Travel</span><span class="spec-value">800 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Y Axis Travel</span><span class="spec-value">450 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Z Axis Travel</span><span class="spec-value">500 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Table Size</span><span class="spec-value">1000 × 450 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Spindle to Table</span><span class="spec-value">175 - 675 mm</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/page7_img2.jpeg" alt="LMW Turning Center">
+                    <div class="equipment-badge">CNC Lathe</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>Turning Center</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Make: LMW</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Max Turning Diameter</span><span class="spec-value">320 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Max Turning Length</span><span class="spec-value">500 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Spindle Size</span><span class="spec-value">A2-6 Nose</span></div>
+                        <div class="spec-row"><span class="spec-label">Max Spindle Speed</span><span class="spec-value">3500 RPM</span></div>
+                        <div class="spec-row"><span class="spec-label">Guide Ways</span><span class="spec-value">LM Guideways</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/page8_img2.jpeg" alt="CNC Wire EDM Machine">
+                    <div class="equipment-badge">Wire EDM</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>CNC Wire EDM</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Model: PS7745N</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">X/Y/Z Travel</span><span class="spec-value">400/500/400 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Table Size</span><span class="spec-value">750 × 500 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Max Workpiece</span><span class="spec-value">400 mm / 500 kg</span></div>
+                        <div class="spec-row"><span class="spec-label">Cutting Accuracy</span><span class="spec-value">±0.01 - ±0.02 mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Surface Finish</span><span class="spec-value">Ra 1.5 - 2.5 μm</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-label">Laser & Bending</span>
+            <h2 class="section-title">
+                Bommasandra <span class="highlight">Fabrication</span> Equipment
+            </h2>
+            <p class="section-desc">
+                Advanced laser cutting, CNC bending, and tube processing infrastructure for high-volume 
+                sheet metal and structural fabrication.
+            </p>
+        </div>
+        <div class="equipment-grid-4">
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/i1.jpeg" alt="6KW Laser Cutting Machine">
+                    <div class="equipment-badge">6KW Laser</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>6KW Laser Cutting + Tube</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Winarc</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Bed Size</span><span class="spec-value">4M × 1.5M</span></div>
+                        <div class="spec-row"><span class="spec-label">MS Cutting</span><span class="spec-value">Up to 25mm</span></div>
+                        <div class="spec-row"><span class="spec-label">SS/Al Cutting</span><span class="spec-value">Up to 12mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Brass/Copper</span><span class="spec-value">Up to 8mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Tube Cutting</span><span class="spec-value">220mm Ø × 6M</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/i2.jpeg" alt="3KW Laser Cutting Machine">
+                    <div class="equipment-badge">3KW Laser</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>3KW Laser Cutting</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Winarc</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Bed Size</span><span class="spec-value">3M × 1.5M</span></div>
+                        <div class="spec-row"><span class="spec-label">MS Cutting</span><span class="spec-value">Up to 18mm</span></div>
+                        <div class="spec-row"><span class="spec-label">SS Cutting</span><span class="spec-value">Up to 10mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Al Cutting</span><span class="spec-value">Up to 8mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Brass/Copper</span><span class="spec-value">Up to 6mm</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/i3.jpeg" alt="320T CNC Bending Machine">
+                    <div class="equipment-badge">320T Bending</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>320T CNC Bending</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> SMT</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Bed Length</span><span class="spec-value">4.1M</span></div>
+                        <div class="spec-row"><span class="spec-label">Axis</span><span class="spec-value">4+1 Axis</span></div>
+                        <div class="spec-row"><span class="spec-label">Bending Thickness</span><span class="spec-value">MS up to 8mm</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/i4.jpeg" alt="110T CNC Bending Machine">
+                    <div class="equipment-badge">110T Bending</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>110T CNC Bending</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Yangli</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Bed Length</span><span class="spec-value">3M</span></div>
+                        <div class="spec-row"><span class="spec-label">MS Thickness</span><span class="spec-value">Up to 8mm</span></div>
+                        <div class="spec-row"><span class="spec-label">SS Thickness</span><span class="spec-value">Up to 6mm</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/i5.jpeg" alt="CNC Tube Bending Machine">
+                    <div class="equipment-badge">Tube Bending</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>3-Axis CNC Tube Bending</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> STM Saint Machinery</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Materials</span><span class="spec-value">MS, Al, SS</span></div>
+                        <div class="spec-row"><span class="spec-label">Tube Capacity</span><span class="spec-value">Dia 50mm</span></div>
+                        <div class="spec-row"><span class="spec-label">Bend Radius</span><span class="spec-value">180mm</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/i6.jpeg" alt="5T Hydraulic Press">
+                    <div class="equipment-badge">Hydraulic Press</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>5T Hydraulic Press</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Make: Noel</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Capacity</span><span class="spec-value">5 Tons</span></div>
+                        <div class="spec-row"><span class="spec-label">Fasteners</span><span class="spec-value">Up to M8</span></div>
+                        <div class="spec-row"><span class="spec-label">Types</span><span class="spec-value">Clinch, Standoff, Studs</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/i7.jpeg" alt="Form Drill and Tapping">
+                    <div class="equipment-badge">Drill & Tap</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>Form Drill & Tapping</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Formdrill</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Type</span><span class="spec-value">High Speed</span></div>
+                        <div class="spec-row"><span class="spec-label">Capacity</span><span class="spec-value">M3 to M12</span></div>
+                        <div class="spec-row"><span class="spec-label">Process</span><span class="spec-value">Predrill & Tapping</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/a11.png" alt="Surface Finishing">
+                    <div class="equipment-badge">Buffing</div>
+                </div>
+                <div class="equipment-info">
+                    <h3>Surface Finishing</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> In-House Team</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Process</span><span class="spec-value">Buffing</span></div>
+                        <div class="spec-row"><span class="spec-label">Materials</span><span class="spec-value">Stainless Steel, Aluminum</span></div>
+                        <div class="spec-row"><span class="spec-label">Finish 1</span><span class="spec-value">Airline Finish</span></div>
+                        <div class="spec-row"><span class="spec-label">Finish 2</span><span class="spec-value">Mirror Finish</span></div>
+                    </div>
+                </div>
+            </div>
+
+
+ <div class="equipment-card fade-in">       
+                <div class="equipment-image">
+                    <img src="images/b1.jpeg" alt="Fabrication Workshop">
+                    <div class="equipment-badge">Fabrication</div>
+                </div>    
+                <div class="equipment-info">
+                    <h3>Fabrication Workshop</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> Bommasandra Facility</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Cutting</span><span class="spec-value">Band Saw, Circular Saw, Cutoff</span></div>
+                        <div class="spec-row"><span class="spec-label">TIG Welding</span><span class="spec-value">SS / Aluminum</span></div>
+                        <div class="spec-row"><span class="spec-label">MIG / CO2</span><span class="spec-value">Welding Machines</span></div>
+                        <div class="spec-row"><span class="spec-label">Drilling</span><span class="spec-value">Drilling Machines</span></div>
+                        <div class="spec-row"><span class="spec-label">Assembly</span><span class="spec-value">Surface Tables</span></div>
+                    </div>    
+                </div>    
+            </div>    
+            
+            
+            
+             <div class="equipment-card fade-in">
+                <div class="equipment-image">
+                    <img src="images/b2.jpeg" alt="Powder Coating Line">
+                    <div class="equipment-badge">Powder Coating</div>
+                </div>    
+                <div class="equipment-info">
+                    <h3>Powder Coating Line</h3>
+                    <p class="equipment-make"><i class="fas fa-industry"></i> GEMA, Germany</p>
+                    <div class="equipment-specs">
+                        <div class="spec-row"><span class="spec-label">Pretreatment</span><span class="spec-value">Iron Phosphate</span></div>
+                        <div class="spec-row"><span class="spec-label">Booth</span><span class="spec-value">Mono Cyclone</span></div>
+                        <div class="spec-row"><span class="spec-label">Guns</span><span class="spec-value">High Speed GEMA</span></div>
+                        <div class="spec-row"><span class="spec-label">Salt Spray</span><span class="spec-value">300 - 1200 Hrs</span></div>
+                        <div class="spec-row"><span class="spec-label">Oven Size</span><span class="spec-value">15 × 8 × 8 ft</span></div>
+                    </div>    
+                </div>    
+            </div>    
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-label">Capabilities</span>
+            <h2 class="section-title">
+                Manufacturing <span class="highlight">Capabilities</span>
+            </h2>
+            <p class="section-desc">
+                Our integrated manufacturing setup supports diverse processes from prototyping 
+                to full-scale production.
+            </p>
+        </div>
+        <div class="capabilities-grid">
+            <div class="capability-card fade-in">
+                <div class="capability-icon"><i class="fas fa-cubes"></i></div>
+                <h3>3-Axis Machining</h3>
+                <p>Versatile for standard machining tasks with high precision and efficiency.</p>
+            </div>
+            <div class="capability-card fade-in">
+                <div class="capability-icon"><i class="fas fa-cube"></i></div>
+                <h3>4-Axis Machining</h3>
+                <p>Enhanced precision and complexity for intricate component geometries.</p>
+            </div>
+            <div class="capability-card fade-in">
+                <div class="capability-icon"><i class="fas fa-circle-notch"></i></div>
+                <h3>Boring Machines</h3>
+                <p>Precise internal diameter machining for critical bore applications.</p>
+            </div>
+            <div class="capability-card fade-in">
+                <div class="capability-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3>Vertical Turning Lathes</h3>
+                <p>Ideal for large, cylindrical parts with heavy-duty cutting capacity.</p>
+            </div>
+            <div class="capability-card fade-in">
+                <div class="capability-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Wire EDM</h3>
+                <p>Precision electrical discharge machining for hardened materials.</p>
+            </div>
+            <div class="capability-card fade-in">
+                <div class="capability-icon"><i class="fas fa-print"></i></div>
+                <h3>3D Printing Technology</h3>
+                <p>Rapid prototyping and complex geometries for design validation.</p>
+            </div>
+            <div class="capability-card fade-in">
+                <div class="capability-icon"><i class="fas fa-fire"></i></div>
+                <h3>TIG & MIG Welding</h3>
+                <p>SS and Aluminium welding for structural and precision assemblies.</p>
+            </div>
+            <div class="capability-card fade-in">
+                <div class="capability-icon"><i class="fas fa-wind"></i></div>
+                <h3>Surface Finishing</h3>
+                <p>Buffing, airline finish, and mirror finish for SS and Al.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="component-gallery-section">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-label">Samples</span>
+            <h2 class="section-title">Manufactured <span class="highlight">Components</span></h2>
+            <p class="section-desc">High-quality parts produced across our dual-facility manufacturing ecosystem.</p>
+        </div>
+        <div class="component-gallery-grid">
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0014.jpg.jpeg" alt="Machined Housing"><p>Machined Housing</p></div>
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0015.jpg.jpeg" alt="Aluminium Block"><p>Aluminium Block</p></div>
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0020.jpg.jpeg" alt="Large Bolt"><p>Large Bolt</p></div>
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0021.jpg.jpeg" alt="Metal Shaft"><p>Metal Shaft</p></div>
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0022.jpg.jpeg" alt="Precision Pin"><p>Precision Pin</p></div>
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0027.jpg.jpeg" alt="Metal Rings"><p>Metal Rings</p></div>
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0028.jpg.jpeg" alt="Stepped Parts"><p>Stepped Parts</p></div>
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0030.jpg.jpeg" alt="Threaded Nut"><p>Threaded Nut</p></div>
+            <div class="component-gallery-item"><img src="images/image7.jpg" alt="Black Cast Parts"><p>Black Cast Parts</p></div>
+            <div class="component-gallery-item"><img src="images/IMG-20260601-WA0035.jpg.jpeg" alt="Black Cylinder"><p>Black Cylinder</p></div>
+            <div class="component-gallery-item"><img src="images/image4.jpg" alt="Black Components"><p>Black Components</p></div>
+            <div class="component-gallery-item"><img src="images/image5.jpg" alt="Aluminium Nozzle"><p>Aluminium Nozzle</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-count="40000">0</div>
+                <div class="stat-label">Sq.Ft Total</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-count="8">0</div>
+                <div class="stat-label">Core Machines</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-count="12">0</div>
+                <div class="stat-label">Core Processes</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-count="0.01">0</div>
+                <div class="stat-label">mm Accuracy</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content fade-in">
+            <h2>Visit Our Facility</h2>
+            <p>See our manufacturing capabilities in action. Schedule a facility tour today.</p>
+            <a href="contact.html" class="btn btn-primary btn-large">
+                <i class="fas fa-calendar-check"></i> Schedule a Tour
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/trolex-logo.jpg" alt="Trolex Logo" class="logo-img">
+                    <div class="logo-text"><span>TROLEX</span></div>
+                </a>
+                <p>Precision-driven manufacturing company delivering end-to-end engineering and production solutions for global industries.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-addresses">
+                    <div class="footer-address">
+                        <h5><i class="fas fa-map-marker-alt"></i> Harohalli</h5>
+                        <p>Plot No.518, Kanakapura Taluk, Maralavadi Hobli, Harohalli Industrial Area Phase 3, Ramanagara, Karnataka , India – 562112</p>
+                    </div>
+                    <div class="footer-address">
+                        <h5><i class="fas fa-map-marker-alt"></i> Bommasandra</h5>
+                        <p>Survey No 349, Shed No 348/A, Jigani Link Road, TaeguTec Circle next to Apotex near KIADB Water Tank, Bommasandra Industrial Estate, Bengaluru, Karnataka, India – 560105</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="quality.html">Quality</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Solutions</h4>
+                <ul class="footer-links">
+                    <li><a href="solutions.html#machining">Precision Machining</a></li>
+                    <li><a href="solutions.html#investment">Investment Casting</a></li>
+                    <li><a href="solutions.html#sheetmetal">Sheet Metal & Fabrication</a></li>
+                    <li><a href="solutions.html#extrusions">Aluminium Extrusions</a></li>
+                    <li><a href="solutions.html#casting">Aluminium Casting</a></li>
+                    <li><a href="solutions.html#pdc">Pressure Die Casting</a></li>
+                    <li><a href="solutions.html#surface">Surface Treatment</a></li>
+                    <li><a href="solutions.html#heat">Heat Treatment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Contact</h4>
+                <div class="footer-contact">
+                    <p><span class="icon"><i class="fas fa-phone"></i></span> +91 91876 00830</p>
+                    <p><span class="icon"><i class="fas fa-envelope"></i></span> info@trolex.in</p>
+                    <p><span class="icon"><i class="fas fa-id-card"></i></span> GST: 29AAMCT9407B1Z4</p>
+                    <p><span class="icon"><i class="fas fa-clock"></i></span> Mon – Sat, 9:00 AM – 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Trolex Products Private Limited. All rights reserved.</p>
+            <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => { mobileToggle.classList.toggle('active'); navLinks.classList.toggle('active'); });
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => { if (!link.classList.contains('has-dropdown')) { mobileToggle.classList.remove('active'); navLinks.classList.remove('active'); } });
+    });
+    function toggleDropdown(e) { if (window.innerWidth <= 768) { e.preventDefault(); e.target.closest('.dropdown').classList.toggle('active'); } }
+    document.getElementById('scrollTop').addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const counters = document.querySelectorAll('.stat-number');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseFloat(entry.target.getAttribute('data-count'));
+                animateCounter(entry.target, target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(counter => counterObserver.observe(counter));
+    function animateCounter(element, target) {
+        let current = 0;
+        const isDecimal = target < 1;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                if (isDecimal) { element.textContent = target; } else { element.textContent = target.toLocaleString() + (target === 100 ? '%' : '+'); }
+                clearInterval(timer);
+            } else {
+                if (isDecimal) { element.textContent = current.toFixed(2); } else { element.textContent = Math.floor(current).toLocaleString(); }
+            }
+        }, 30);
+    }
+</script>
+</body>
+</html>
