@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trolex Products Private Limited | Precision Manufacturing Beyond Boundaries</title>
+    <meta name="description" content="Trolex Products Private Limited - Precision-driven manufacturing company delivering end-to-end engineering and production solutions across 40,000+ sq ft facilities at Harohalli and Bommasandra.">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="quality.css">
+    <style>
+        /* Facility Cards V2 - About Page Style */
+        .facility-preview-grid-v2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .facility-card-v2 {
+            background: var(--bg-white);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-sm);
+        }
+        .facility-card-v2:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .facility-card-image {
+            height: 260px;
+            overflow: hidden;
+        }
+        .facility-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .facility-card-v2:hover .facility-card-image img {
+            transform: scale(1.08);
+        }
+        .facility-card-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+            height: 260px;
+        }
+        .facility-card-images img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+        .facility-card-v2:hover .facility-card-images img {
+            transform: scale(1.05);
+        }
+        .facility-card-overlay {
+            padding: 24px;
+            text-align: center;
+        }
+        .facility-card-overlay h3 {
+            font-family: var(--font-display);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--nav-blue-dark);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .facility-card-overlay p {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--nav-blue-light);
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+        }
+        @media (max-width: 768px) {
+            .facility-preview-grid-v2 {
+                grid-template-columns: 1fr;
+            }
+            .facility-card-images {
+                grid-template-columns: 1fr;
+                height: auto;
+            }
+            .facility-card-images img {
+                height: 180px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo">
+            <img src="images/trolex-logo.jpg" alt="Trolex Logo" class="logo-img">
+            <div class="logo-text">
+                <span>TROLEX</span>
+            </div>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <div class="dropdown" id="solutionsDropdown">
+                <a href="solutions.html" class="nav-link has-dropdown" onclick="toggleDropdown(event)">
+                    Solutions <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="solutions.html#machining" class="dropdown-item">Precision Machining</a>
+                    <a href="solutions.html#investment" class="dropdown-item">Investment Casting</a>
+                    <a href="solutions.html#sheetmetal" class="dropdown-item">Sheet Metal Cutting, Bending & Welding</a>
+                    <a href="solutions.html#extrusions" class="dropdown-item">Aluminium Extrusions</a>
+                    <a href="solutions.html#casting" class="dropdown-item">Aluminium Casting</a>
+                    <a href="solutions.html#pdc" class="dropdown-item">Pressure Die Casting</a>
+                    <a href="solutions.html#surface" class="dropdown-item">Surface Treatment</a>
+                    <a href="solutions.html#heat" class="dropdown-item">Heat Treatment</a>
+                </div>
+            </div>
+            <a href="infrastructure.html" class="nav-link">Infrastructure</a>
+            <a href="quality.html" class="nav-link">Quality</a>
+            <a href="contact.html" class="nav-contact-btn-mobile">Contact Us</a>
+        </div>
+        <a href="contact.html" class="nav-contact-btn">Contact Us</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ===================== HERO SECTION ===================== -->
+<section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Precision Manufacturing
+                </div>
+            </div>
+            <h1 class="hero-title">
+                <span class="line-1">Engineering</span>
+                <span class="line-1">Excellence</span>
+                <span class="highlight">Beyond Limits</span>
+            </h1>
+            <p class="hero-subtitle">
+                Trolex Products Private Limited delivers end-to-end engineering and production
+                solutions across 40,000+ sq ft of manufacturing infrastructure at Harohalli and Bommasandra.
+                From rapid prototyping to full-scale production, we transform concepts into
+                high-quality, production-ready components.
+            </p>
+            <div class="hero-buttons">
+                <a href="solutions.html" class="btn btn-primary">
+                    <i class="fas fa-cogs"></i> <span>Explore Solutions</span>
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get in Touch
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-image-frame">
+                <img src="images/hero1.png" alt="Trolex Precision Manufacturing - CNC Machined Component">
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+<!-- ===================== STATS SECTION ===================== -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-count="40000">0</div>
+                <div class="stat-label">Sq.Ft Infrastructure</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-count="8">0</div>
+                <div class="stat-label">Core Processes</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-count="50">0</div>
+                <div class="stat-label">Material Grades</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number" data-count="100">0</div>
+                <div class="stat-label">Client Satisfaction %</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== SOLUTIONS SECTION ===================== -->
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span  style="font-size: 20px;" class="section-label">Our Expertise</span>
+            <h2 class="section-title">
+                Integrated <span class="highlight">Manufacturing</span> Solutions
+            </h2>
+            <p class="section-desc">
+                From concept to completion, we offer comprehensive manufacturing capabilities
+                across multiple processes and materials to meet your exact specifications.
+            </p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <div class="feature-icon"><i class="fas fa-cog"></i></div>
+                <h3 class="feature-title">Precision Machining</h3>
+                <p class="feature-desc">
+                    Comprehensive machining for Bars, Blocks, and Tubes across Alloy Steels,
+                    Stainless Steel, Aluminium, Titanium, and Engineering Plastics.
+                </p>
+                <a href="solutions.html#machining" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                <h3 class="feature-title">Investment Casting</h3>
+                <p class="feature-desc">
+                    Advanced Lost Wax Investment Casting with precision secondary machining
+                    for CF8, CF8M, AISI 410 & 430 grades, Carbon Steel, and ADI.
+                </p>
+                <a href="solutions.html#investment" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon"><i class="fas fa-cut"></i></div>
+                <h3 class="feature-title">Sheet Metal & Fabrication</h3>
+                <p class="feature-desc">
+                    Laser cutting, CNC bending, tube processing, TIG/MIG welding, structural
+                    fabrication, powder coating, and assembly services.
+                </p>
+                <a href="solutions.html#sheetmetal" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+                <h3 class="feature-title">Aluminium Extrusions</h3>
+                <p class="feature-desc">
+                    High-quality extrusion manufacturing in 6000 Series and 7000 Series
+                    Aluminium alloys for structural and precision applications.
+                </p>
+                <a href="solutions.html#extrusions" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon"><i class="fas fa-cube"></i></div>
+                <h3 class="feature-title">Aluminium Casting</h3>
+                <p class="feature-desc">
+                    End-to-end Aluminium Casting through Gravity Die Casting and Sand Casting
+                    processes for complex geometries and high-volume production.
+                </p>
+                <a href="solutions.html#casting" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+                <h3 class="feature-title">Pressure Die Casting</h3>
+                <p class="feature-desc">
+                    High-pressure die casting for LM Series, A350, A380, and ADC12 material
+                    grades with excellent surface finish and dimensional accuracy.
+                </p>
+                <a href="solutions.html#pdc" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon"><i class="fas fa-paint-roller"></i></div>
+                <h3 class="feature-title">Surface Treatment</h3>
+                <p class="feature-desc">
+                    Complete surface finishing including Passivation, Anodizing, Powder Coating,
+                    Zinc Plating, and Electroless Nickel Coating.
+                </p>
+                <a href="solutions.html#surface" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="feature-icon"><i class="fas fa-fire-alt"></i></div>
+                <h3 class="feature-title">Heat Treatment</h3>
+                <p class="feature-desc">
+                    Controlled thermal processing including Hardening, Annealing, Case Hardening,
+                    and Nitriding to enhance material mechanical properties and durability.
+                </p>
+                <a href="solutions.html#heat" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FACILITY PREVIEW ===================== -->
+<section class="section section-white">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span  style="font-size: 20px;"  class="section-label">Our Facilities</span>
+            <h2 class="section-title">
+                Dual Facility <span class="highlight">40,000+ sq.ft</span> Manufacturing Ecosystem
+            </h2>
+            <p class="section-desc">
+                Harohalli Phase 3 precision machining facility combined with Bommasandra
+                fabrication and mass manufacturing infrastructure.
+            </p>
+        </div>
+        <div class="facility-preview-grid-v2">
+            <!-- Harohalli Facility -->
+            <div class="facility-card-v2 fade-in">
+                <div class="facility-card-image">
+                    <img src="images/about2.png" alt="Trolex Harohalli CNC Facility">
+                </div>
+                <div class="facility-card-overlay">
+                    <h3>Harohalli Facility</h3>
+                    <p>8,000 sq.ft | CNC Machining & Precision Manufacturing</p>
+                </div>
+            </div>
+            <!-- Bommasandra Facility -->
+            <div class="facility-card-v2 fade-in">
+                <div class="facility-card-images">
+                    <img src="images/b1.jpeg" alt="Bommasandra Fabrication Workshop">
+                    <img src="images/b2.jpeg" alt="Bommasandra Laser Cutting & Powder Coating">
+                    <img src="images/b3.jpeg" alt="Bommasandra Industrial Estate">
+                </div>
+                <div class="facility-card-overlay">
+                    <h3>Bommasandra Facility</h3>
+                    <p>32,000+ sq.ft | Fabrication, Laser Cutting & Powder Coating</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+
+<section class="section section-light">
+    <div class="container">
+        <div class="section-header fade-in">
+                <span style="font-size: 20px;" class="section-label">Why Us</span>
+            <h2 class="section-title">
+                Trusted <span class="highlight">Manufacturing</span> Partner
+            </h2>
+            <p class="section-desc">
+                Powered by trusted vendor partnerships and integrated manufacturing excellence
+                across two state-of-the-art facilities.
+            </p>
+        </div>
+        <div class="why-quality-grid">
+            <div class="why-quality-card fade-in"><i class="fas fa-network-wired"></i><h3>Multi-Process Manufacturing Support</h3><p>Access to specialized vendors for diverse manufacturing processes under one integrated, quality-managed supply chain.</p></div>
+            <div class="why-quality-card fade-in"><i class="fas fa-users-cog"></i><h3>Quality-Driven Partnerships</h3><p>Collaborating with qualified and performance-focused vendors to maintain global quality standards and process consistency.</p></div>
+            <div class="why-quality-card fade-in"><i class="fas fa-expand-arrows-alt"></i><h3>Scalable Production Capability</h3><p>Efficient quality management from prototypes, low-volume batches, to high-volume production with no compromise on standards.</p></div>
+            <div class="why-quality-card fade-in"><i class="fas fa-shipping-fast"></i><h3>Faster Lead Times</h3><p>Optimized quality processes integrated into production planning ensure reliable, timely deliveries without quality shortcuts.</p></div>
+            <div class="why-quality-card fade-in"><i class="fas fa-vials"></i><h3>Material & Process Flexibility</h3><p>Quality-verified sourcing across ferrous, non-ferrous, stainless steel, aluminium, titanium, engineering plastics, and specialty materials.</p></div>
+            <div class="why-quality-card fade-in"><i class="fas fa-link"></i><h3>End-to-End Supply Chain Quality</h3><p>Seamless quality management from raw material procurement through every production stage to finished component delivery.</p></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- ===================== CTA SECTION ===================== -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content fade-in">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Get a quote for your precision manufacturing requirements today.</p>
+            <a href="contact.html" class="btn btn-primary btn-large">
+                <i class="fas fa-paper-plane"></i> <span>Request a Quote</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/trolex-logo.jpg" alt="Trolex Logo" class="logo-img">
+                    <div class="logo-text"><span>TROLEX</span></div>
+                </a>
+                <p>Precision-driven manufacturing company delivering end-to-end engineering and production solutions for global industries.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="footer-addresses">
+                    <div class="footer-address">
+                        <h5><i class="fas fa-map-marker-alt"></i> Harohalli</h5>
+                        <p>Plot No.518, Kanakapura Taluk, Maralavadi Hobli, Harohalli Industrial Area Phase 3, Ramanagara, Karnataka , India– 562112</p>
+                    </div>
+                    <div class="footer-address">
+                        <h5><i class="fas fa-map-marker-alt"></i> Bommasandra</h5>
+                        <p>Survey No 349, Shed No 348/A, Jigani Link Road, TaeguTec Circle next to Apotex near KIADB Water Tank, Bommasandra Industrial Estate, Bengaluru, Karnataka, India – 560105</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="infrastructure.html">Infrastructure</a></li>
+                    <li><a href="quality.html">Quality</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Solutions</h4>
+                <ul class="footer-links">
+                    <li><a href="solutions.html#machining">Precision Machining</a></li>
+                    <li><a href="solutions.html#investment">Investment Casting</a></li>
+                    <li><a href="solutions.html#sheetmetal">Sheet Metal & Fabrication</a></li>
+                    <li><a href="solutions.html#extrusions">Aluminium Extrusions</a></li>
+                    <li><a href="solutions.html#casting">Aluminium Casting</a></li>
+                    <li><a href="solutions.html#pdc">Pressure Die Casting</a></li>
+                    <li><a href="solutions.html#surface">Surface Treatment</a></li>
+                    <li><a href="solutions.html#heat">Heat Treatment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Contact</h4>
+                <div class="footer-contact">
+                    <p><span class="icon"><i class="fas fa-phone"></i></span> +91 91876 00830</p>
+                    <p><span class="icon"><i class="fas fa-envelope"></i></span> info@trolex.in</p>
+                    <p><span class="icon"><i class="fas fa-id-card"></i></span> GST: 29AAMCT9407B1Z4</p>
+                    <p><span class="icon"><i class="fas fa-clock"></i></span> Mon – Sat, 9:00 AM – 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Trolex Products Private Limited. All rights reserved.</p>
+            <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (!link.classList.contains('has-dropdown')) {
+                mobileToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    document.querySelector('.nav-contact-btn-mobile')?.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+    function toggleDropdown(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.target.closest('.dropdown').classList.toggle('active');
+        }
+    }
+    document.getElementById('scrollTop').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target, parseFloat(entry.target.getAttribute('data-count')));
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number').forEach(c => counterObserver.observe(c));
+
+    function animateCounter(element, target) {
+        let current = 0;
+        const increment = target / 60;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                element.textContent = target.toLocaleString() + (target === 100 ? '%' : '+');
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(current).toLocaleString();
+            }
+        }, 30);
+    }
+</script>
+</body>
+</html>

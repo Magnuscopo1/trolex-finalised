@@ -1,0 +1,25 @@
+{
+  "name": "trolexthursday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"scripts": {
+  "dev": "vite",
+  "build": "vite build"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Magnuscopo1/trolex-finalised.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Magnuscopo1/trolex-finalised/issues"
+  },
+  "homepage": "https://github.com/Magnuscopo1/trolex-finalised#readme",
+  "devDependencies": {
+    "vite": "^8.1.3"
+  }
+}
